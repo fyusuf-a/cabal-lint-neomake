@@ -21,6 +21,9 @@ call plug#begin()
 Plug 'fyusuf-a/cabal-lint-neomake'
 Plug 'neomake/neomake'
 call plug#end()
+
+"You could add other makers. Neomake is shipped with makers hdevtools, ghcmod, hlint, liquid
+let g:neomake_haskell_enabled_makers = ['cabal_lint', 'hlint']
 ```
 
 And then call `:PlugInstall`
@@ -32,8 +35,12 @@ If you are using VIM version 8 or higher you can use its built-in package manage
 ```bash
 git clone https://github.com/fyusuf-a/cabal-lint-neomake ~/.vim/pack/vendor/start/cabal-lint-neomake
 git clone https://github.com/neomake/neomake ~/.vim/pack/vendor/start/neomake
-vim -u NONE -c "helptags ~/.vim/pack/vendor/start/cabal-lint-neomake/doc" -c q
 vim -u NONE -c "helptags ~/.vim/pack/vendor/start/neomake/doc" -c q
+```
+And the following to your .vimrc:
+```vim
+"You could add other makers. Neomake is shipped with makers hdevtools, ghcmod, hlint, liquid
+let g:neomake_haskell_enabled_makers = ['cabal_lint', 'hlint']
 ```
 
 Otherwise, these are some of the several 3rd-party plugin managers you can choose from. Be sure you read the instructions for your chosen plugin, as there typically are additional steps you need to take.
@@ -48,6 +55,9 @@ git clone https://github.com/neomake/neomake ~/.vim/bundle/neomake
 In your vimrc,
 ```vim
 call pathogen#infect()
+
+"You could add other makers. Neomake is shipped with makers hdevtools, ghcmod, hlint, liquid
+let g:neomake_haskell_enabled_makers = ['cabal_lint', 'hlint']
 ```
 
 Then reload vim, run `:Helptags`.
@@ -58,10 +68,18 @@ call vundle#begin()
 Plugin 'fyusuf-a/cabal-lint-neomake'
 Plugin 'neomake/neomake'
 call vundle#end()
+
+"You could add other makers. Neomake is shipped with makers hdevtools, ghcmod, hlint, liquid
+let g:neomake_haskell_enabled_makers = ['cabal_lint', 'hlint']
 ```
 
 #### [apt-vim](https://github.com/egalpin/apt-vim)
 ```bash
 apt-vim install -y https://github.com/fyusuf-a/cabal-lint-neomake.git
 apt-vim install -y https://github.com/neomake/neomake.git
+```
+And the following to your .vimrc:
+```vim
+"You could add other makers. Neomake is shipped with makers hdevtools, ghcmod, hlint, liquid
+let g:neomake_haskell_enabled_makers = ['cabal_lint', 'hlint']
 ```
